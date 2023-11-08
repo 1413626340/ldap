@@ -1,6 +1,7 @@
 # ldap
 ldap的基本配置
 
+下面文件在shell中
 以下是Ldap常用操作的脚本实现
 groupadd
 groupdel
