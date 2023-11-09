@@ -34,8 +34,11 @@ if [ -n $uname ] && [ -n $groupname ];then
 
 		Flag=`ldapadd -x -D cn=csadmin,dc=cs,dc=cn -w $passwd -f modify.ldif`
 
-		
+		sleep 20
 		mkdir /home/$groupname/$uname
+		scp /root/.bash_logout /home/$groupname/$uname
+                scp /root/.bashrc /home/$groupname/$uname
+                scp /root/.bash_profile /home/$groupname/$uname
 		chown $uname:$groupname /home/$groupname/$uname
 		chmod 750 /home/$groupname/$uname	
 	else

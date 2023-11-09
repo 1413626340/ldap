@@ -23,6 +23,7 @@ if [ -n "$groupName" ];then
 	fi
    	
 	Flag=`ldapadd -x -D cn=csadmin,dc=cs,dc=cn -w 123456 -f group.ldif`
+	sleep 20
 	mkdir -p /home/$groupName
 	chmod 750 /home/$groupName
 	
